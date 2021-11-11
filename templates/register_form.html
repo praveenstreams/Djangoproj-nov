@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+{% csrf_token %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% csrf_token %}
+ {% block content %}
+<form method="post" enctype="multipart/form-data"  action="{%url 'std_register'%}" >
+    {% csrf_token %}
+    <input type="text" placeholder="Enter name" name="name">
+    <input type="text" placeholder="DOB - DD/MM/YY" name="dob">
+    <input type="text" placeholder="phone" name="phone">
+    <input type="file" placeholder="Upload your photo" name="file">
+    <input type="password" name="pass1" placeholder="Enter password">
+    <input type="password" name="pass2" placeholder="Confirm password">
+    <button>Register</button>
+</form>
+{% endblock %}
+{{txt}}
+{{patt}}
+
+</body>
+</html>

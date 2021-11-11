@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+{% csrf_token %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% csrf_token %}
+<form method="post" action="login">{{txt}}
+    {% csrf_token %}
+    <input type="text" name="phone" placeholder="Enter phone">
+    <input type="password" placeholder="Enter password" name="password">
+    <button>Login</button>
+
+    <h2>{{txt}}</h2>
+</form>
+<form  action="{%url 'admin_reg_home'%}">
+<button>Register as Admin</button>
+</form>
+
+
+<form  action="{%url 'student_reg_home'%}">
+<button> Register as Student</button>
+</form>
+
+
+
+</body>
+</html>

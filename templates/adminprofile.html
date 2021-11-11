@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<img src="{{ MEDIA_URL }}media/tmp/1234.jpg" /><br>
+
+{% for i in data%}
+{{ i.name  }}<br><br>
+{{i.phone}}<br><br>
+{{i.dob}}<br><br>
+{% endfor %}
+</body>
+</html>
