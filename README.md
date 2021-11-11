@@ -1,0 +1,2 @@
+# Djangoproj-nov
+machine test
